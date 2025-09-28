@@ -3,9 +3,7 @@ import jwt from "jsonwebtoken";
 import Post from "../models/Post.js"; // Post model
 import ExpressError from "../utils/ExpressError.js";
 
-// --------------------
 //  User Auth Check (JWT)
-// --------------------
 export const isLoggedIn = (req, res, next) => {
   const authHeader = req.header("Authorization");
   if (!authHeader) {
@@ -27,9 +25,7 @@ export const isLoggedIn = (req, res, next) => {
   }
 };
 
-// --------------------
 //  Owner Check (Post Owner)
-// --------------------
 export const isOwner = async (req, res, next) => {
   const { id } = req.params; // post id from URL
   const post = await Post.findById(id);
