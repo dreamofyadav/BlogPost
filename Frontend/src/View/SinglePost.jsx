@@ -13,7 +13,7 @@ export default function SinglePost() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/blogs/${id}`);
+        const res = await axios.get(`https://blogpost-q2as.onrender.com/blogs/${id}`);
         setBlog(res.data.post);
         setLoading(false);
       } catch (err) {
@@ -32,7 +32,7 @@ export default function SinglePost() {
         const token = localStorage.getItem("token");
         if (!token) return; // agar login nahi hai to skip
 
-        const res = await axios.get("http://localhost:3001/users/me", {
+        const res = await axios.get("https://blogpost-q2as.onrender.com/users/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCurrentUser(res.data.user);
@@ -51,7 +51,7 @@ export default function SinglePost() {
         Authorization: `Bearer ${token}`,
       },
     };
-    await axios.delete(`http://localhost:3001/blogs/${id}`, config);
+    await axios.delete(`https://blogpost-q2as.onrender.com/blogs/${id}`, config);
     toast.success("Blog Deleted!");
     // alert("Blog deleted successfully");
     // redirect ya state update
