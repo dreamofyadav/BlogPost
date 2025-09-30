@@ -12,7 +12,7 @@ export default function Home() {
 useEffect(() => {       
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/blogs", );
+      const res = await axios.get("https://blogpost-q2as.onrender.com/blogs", );
       console.log(res.data);
       setBlogs(res.data.posts); // backend returns array of blog objects
     } catch (err) {
