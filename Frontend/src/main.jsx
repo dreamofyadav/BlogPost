@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 // import ApiAuthProvider from './Context/ApiAuth.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="/" >
+  <BrowserRouter>
    
       <App />
     
