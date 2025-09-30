@@ -22,7 +22,7 @@ export default function Login() {
     setLoading(true);
     try {
       // Backend ko request bhejna
-      const res = await axios.post("http://localhost:3001/auth/login", form);
+      const res = await axios.post("https://blogpost-q2as.onrender.com/auth/login", form);
 
        localStorage.setItem("token", res.data.token);
       // console.log("Login Success:", res.data);
