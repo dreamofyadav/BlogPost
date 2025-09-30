@@ -41,7 +41,7 @@ export default function AddBlog() {
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "http://localhost:3001/blogs",
+        "https://blogpost-q2as.onrender.com/blogs",
         formData,
         {
           headers: {
