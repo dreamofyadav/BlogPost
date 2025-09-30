@@ -21,7 +21,7 @@ export default function EditBlog() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/blogs/${id}`);
+        const res = await axios.get(`https://blogpost-q2as.onrender.com/blogs/${id}`);
         if (res.data.success) {
           const blog = res.data.post;
           setForm({
@@ -64,7 +64,7 @@ export default function EditBlog() {
 
        const token = localStorage.getItem("token");
 
-      const res = await axios.put(`http://localhost:3001/blogs/${id}`, formData, {
+      const res = await axios.put(`https://blogpost-q2as.onrender.com/blogs/${id}`, formData, {
         headers: { 
             "Content-Type": "multipart/form-data", 
             Authorization:`Bearer ${token}`,
