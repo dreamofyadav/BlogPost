@@ -24,7 +24,7 @@ export default function signup() {
 
     try {
       // Backend ko request bhejna
-      const res = await axios.post("http://localhost:3001/auth/signup", form);
+      const res = await axios.post("https://blogpost-q2as.onrender.com/auth/signup", form);
 
       // console.log("Signup Success:", res.data);
       toast.success(`Signup successful! Welcome`);
